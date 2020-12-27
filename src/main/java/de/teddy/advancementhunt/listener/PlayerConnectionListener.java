@@ -20,6 +20,10 @@ public class PlayerConnectionListener implements Listener {
 
     @EventHandler
     public void onJoin(PlayerJoinEvent event) {
+        /**
+         * Added delay.
+         * for some reason Player object was null so lets try adding some delay.
+         */
         Bukkit.getScheduler().runTaskLater(AdvancementHunt.getInstance(), new Runnable() {
             @Override
             public void run() {
