@@ -1,0 +1,39 @@
+# ----------------------------------------------------------------------------
+# messages
+# I made this new messages config because its easy for me to do things
+# ----------------------------------------------------------------------------
+
+Messages:
+  Hunter_won:
+    send_type: "ACTION_BAR"
+    message: "&cWinner: The Hunters"
+  Game_over:
+    send_type: "CHAT"
+    message: "&cThe game is over!"
+  Player_offline:
+    send_type: "CHAT"
+    message: "&cThis player is not online!"
+  Time_left:
+    send_type: "CHAT"
+    message: "&cTime left: %minutes%"
+  THE_FLEEING_PLAYER:
+    send_type: "CHAT"
+    message: "&cThe Fleeing Player: %player%"
+  the_hunter:
+    send_type: "CHAT"
+    message: "&cHunter: %player%"
+  won:
+    send_type: "CHAT"
+    message: "&c%player% won!"
+  not_enough_players:
+    send_type: "CHAT"
+    message: "&cThere are &a%count% &cplayers missing until the start"
+  is_fleeing_player:
+    send_type: "CHAT"
+    message: "&cThe hunters are nearly behind you...! Make advancement: %id%"
+  Stop_Game:
+    send_type: "CHAT"
+    message: "&cThe game stops in %seconds% seconds"
+  Start_Game:
+    send_type: "CHAT"
+    message: "&cThe game starts in %seconds% seconds"

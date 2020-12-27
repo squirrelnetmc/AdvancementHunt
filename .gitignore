@@ -1,0 +1,15 @@
+# IDE
+*.classpath
+*.project
+*.settings/
+.idea/
+*.iml
+.DS_Store
+
+# Build
+.gradle/
+jars/
+out/
+build/
+target/
+*.class
