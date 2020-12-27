@@ -1,5 +1,6 @@
 package de.teddy.advancementhunt.config;
 
+import de.teddy.advancementhunt.AdvancementHunt;
 import org.bukkit.ChatColor;
 import org.bukkit.configuration.file.YamlConfiguration;
 
@@ -8,7 +9,8 @@ import java.io.IOException;
 
 public class ConfigManager {
 
-    private File file = new File("plugins//AdvancementHunt//config.yml");
+    private File data_folder = new File(AdvancementHunt.getInstance().getDataFolder() + "");
+    private File file = new File(data_folder,"config.yml");
     private YamlConfiguration config = YamlConfiguration.loadConfiguration(file);
 
     public ConfigManager() {
