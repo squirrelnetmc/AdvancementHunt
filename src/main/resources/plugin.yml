@@ -3,7 +3,7 @@ version: ${project.version}
 main: de.teddy.advancementhunt.AdvancementHunt
 api-version: 1.13
 author: regulad
-depend: [PlaceholderAPI, Multiverse-Core]
+depend: [PlaceholderAPI, Multiverse-Core, Multiverse-NetherPortals]
 
 commands:
   set:
