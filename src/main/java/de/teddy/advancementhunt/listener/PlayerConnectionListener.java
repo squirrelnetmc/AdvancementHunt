@@ -19,6 +19,17 @@ public class PlayerConnectionListener implements Listener {
     LobbyState lobbyState = (LobbyState) AdvancementHunt.getInstance().getGameStateManager().getCurrentGameState();
 
     @EventHandler
+    public void onPlayerPreJoin(AsyncPlayerPreLoginEvent event)
+    {
+        /**
+         * Disallow player join incase game already started
+         */
+        if(AdvancementHunt.getInstance().getGameStateManager().getCurrentGameState() instanceof EndingState)
+        {
+            event.disallow(AsyncPlayerPreLoginEvent.Result.KICK_OTHER,"§cRound already started");
+        }
+    }
+    @EventHandler
     public void onJoin(PlayerJoinEvent event) {
         /**
          * Added delay.
@@ -31,8 +42,6 @@ public class PlayerConnectionListener implements Listener {
 
                 if(!(AdvancementHunt.getInstance().getGameStateManager().getCurrentGameState() instanceof EndingState)) {
                     AdvancementHunt.getInstance().getUtils().getLocationUtil().teleport(player, "LobbySpawn");
-                } else {
-                    player.kickPlayer("§cRound already started");
                 }
             }
         },100);
